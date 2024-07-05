@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background-color: lightgray;
+            overflow-x: hidden;
+        }
+
+        *{
+            box-sizing: border-box;
+        }
+
+        .hero-container{
+            border: solid cyan;
+            border-width: 5px;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            flex-flow: column wrap;
+            color: lightgray;
+            font-family: Garamond;
+            font-size: x-large;
+            background: url(data:image/jpeg;base64,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) top left/ cover no-repeat;
+            margin-top: -5rem;
+            
+        }
+        .Intro{
+            margin-left: 30px;
+        }
+
+        .black{
+            border: solid white;
+            border-width: .1px;
+            background-color: rgba(0,0,0,.6);
+            width: 100vw;
+            height: 5rem;
+            position: relative;
+            color: lightgray;
+            font-size: large;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .contact{
+            text-decoration: none;
+            color: cornflowerblue;
+        }
+
+        .about{
+            text-decoration: none;
+            color: cornflowerblue;
+        }
+
+        .Amateur{
+            margin-left: 10px;
+            background-color: darkblue;
+            padding: 10px;
+            border: solid lightgray;
+        }
+
+        .work{
+            margin-left: 30px;
+
+        }
+
+        .Me{
+            border: solid lightgray;
+            background-color: darkblue;
+            color: darkgray;
+            padding: 5px;
+        }
+
+        .projects-container{
+            display: flex;
+            flex-direction: column;
+            background-color: darkgray;
+            border: solid gray;
+            border-radius: 10px;
+        }
+
+        .end{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="black" class="container-fluid">
+        <Span class="Amateur">Amateur programmer</Span>
+        <a href="" class="contact"><span>Contact information</span></a>
+        <a href="" class="about"><span> About me</span></a>
+        <button class="Me">Contact me</button>
+        </div>
+    <div class="hero-container" class="container-fluid">
+            <span class="Intro">My name is ---------. I have dreams of becoming a better programmer.  <br /> I am a highschool student in -------.</span>
+            <span class="work">I have worked for my dad's company in packaging and I remove roots from our garden.<br /> I am currently taking classes to achieve my dream<br /> and in the future. I would like to make my own video game or app.</span>
+        </div>
+    </section>
+    <br />
+    <hr />
+    <br />
+    <section class="projects">
+        <div class="projects-container">
+            <h1>Project that I have worked on in the past :</h1>
+            <h2>TinDog Project:</h2>
+            <a href="http://127.0.0.1:3000/11.3%20TinDog%20Project/index.html"><img src="./TinDog.png" alt="A website known as TinDog" width="400px" height="200px"></a>
+            <br />
+        </div>
+
+    </section>
+
+    <br />
+
+    <div class="end">
+    <footer>This is definetly A website.</footer>
+    </div>
+</body>
+</html>
